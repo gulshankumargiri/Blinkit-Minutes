@@ -19,11 +19,14 @@ public class CustomerController {
 	final CustomerService customerService;
 
 	CustomerController(CustomerService customerService) {
+
 		this.customerService = customerService;
 	}
 
 	@PostMapping("register")
 	public Customer_Response createNewCustomerDetails(@Validated @RequestBody CustomerRequest customerRequest) {
+
+		System.out.println("Customer register triggered...");
 		return customerService.registerCustomer(customerRequest);
 
 	}

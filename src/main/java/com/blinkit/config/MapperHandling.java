@@ -25,7 +25,7 @@ public class MapperHandling {
 	@Autowired
 	ModelMapper modelMapper;
 
-	// product Handling
+	// product Handling 
 	public ProductRequest getProductRequest(ProductEntity productEntity) {
 		return modelMapper.map(productEntity, ProductRequest.class);
 	}
